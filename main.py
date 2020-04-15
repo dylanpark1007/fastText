@@ -122,8 +122,7 @@ def load_model(model, optimizer, load_path):
     model.load_state_dict(checkpoint['state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer'])
 
-
-# https://github.com/pytorch/examples/tree/master/mnist_hogwild
+    
 def train(rank, device, model, args, use_cuda):
     torch.manual_seed(args.seed + rank)
 
